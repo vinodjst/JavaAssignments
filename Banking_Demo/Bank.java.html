@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Bank.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #2aacb8;}
+.s4 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Bank.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">Assignment_Java</span><span class="s2">.</span><span class="s1">Banking_Demo</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">Bank </span><span class="s2">{</span>
+    <span class="s0">public void </span><span class="s1">manageAccounts</span><span class="s2">(){</span>
+        <span class="s1">SavingsAccount sa </span><span class="s2">= </span><span class="s0">new </span><span class="s1">SavingsAccount</span><span class="s2">();</span>
+
+        <span class="s1">sa</span><span class="s2">.</span><span class="s1">setAccountNumber</span><span class="s2">(</span><span class="s3">12345</span><span class="s2">);</span>
+        <span class="s1">sa</span><span class="s2">.</span><span class="s1">setAccountHolderName</span><span class="s2">(</span><span class="s4">&quot;chandu&quot;</span><span class="s2">);</span>
+        <span class="s1">sa</span><span class="s2">.</span><span class="s1">setBalance</span><span class="s2">(</span><span class="s3">10000</span><span class="s2">);</span>
+        <span class="s1">sa</span><span class="s2">.</span><span class="s1">setInterestRate</span><span class="s2">(</span><span class="s3">8</span><span class="s2">);</span>
+
+        <span class="s1">sa</span><span class="s2">.</span><span class="s1">deposit</span><span class="s2">(</span><span class="s3">1000</span><span class="s2">);</span>
+
+        <span class="s1">sa</span><span class="s2">.</span><span class="s1">displayDetails</span><span class="s2">();</span>
+
+        <span class="s1">sa</span><span class="s2">.</span><span class="s1">withdraw</span><span class="s2">(</span><span class="s3">500</span><span class="s2">);</span>
+
+        <span class="s1">sa</span><span class="s2">.</span><span class="s1">displayDetails</span><span class="s2">();</span>
+
+        <span class="s1">CurrentAccount ca </span><span class="s2">= </span><span class="s0">new </span><span class="s1">CurrentAccount</span><span class="s2">();</span>
+
+        <span class="s1">ca</span><span class="s2">.</span><span class="s1">setAccountNumber</span><span class="s2">(</span><span class="s3">86795</span><span class="s2">);</span>
+        <span class="s1">ca</span><span class="s2">.</span><span class="s1">setAccountHolderName</span><span class="s2">(</span><span class="s4">&quot;venky&quot;</span><span class="s2">);</span>
+        <span class="s1">ca</span><span class="s2">.</span><span class="s1">setBalance</span><span class="s2">(</span><span class="s3">20000</span><span class="s2">);</span>
+        <span class="s1">ca</span><span class="s2">.</span><span class="s1">setOverdraftLimit</span><span class="s2">(</span><span class="s3">200000</span><span class="s2">);</span>
+
+        <span class="s1">ca</span><span class="s2">.</span><span class="s1">deposit</span><span class="s2">(</span><span class="s3">5000</span><span class="s2">);</span>
+
+        <span class="s1">ca</span><span class="s2">.</span><span class="s1">displayDetails</span><span class="s2">();</span>
+
+        <span class="s1">ca</span><span class="s2">.</span><span class="s1">withdraw</span><span class="s2">(</span><span class="s3">15000</span><span class="s2">);</span>
+
+        <span class="s1">ca</span><span class="s2">.</span><span class="s1">displayDetails</span><span class="s2">();</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+        <span class="s1">Bank b </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Bank</span><span class="s2">();</span>
+        <span class="s1">b</span><span class="s2">.</span><span class="s1">manageAccounts</span><span class="s2">();</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>

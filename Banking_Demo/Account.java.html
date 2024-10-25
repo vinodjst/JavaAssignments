@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Account.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #2aacb8;}
+.s5 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Account.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">Assignment_Java</span><span class="s2">.</span><span class="s1">Banking_Demo</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">Account </span><span class="s2">{</span>
+    <span class="s0">private int </span><span class="s1">accountNumber</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">String accountHolderName</span><span class="s2">;</span>
+    <span class="s0">private double </span><span class="s1">balance</span><span class="s2">;</span>
+
+    <span class="s0">public int </span><span class="s1">getAccountNumber</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">accountNumber</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setAccountNumber</span><span class="s2">(</span><span class="s0">int </span><span class="s1">accountNumber</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">accountNumber </span><span class="s2">= </span><span class="s1">accountNumber</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">String getAccountHolderName</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">accountHolderName</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setAccountHolderName</span><span class="s2">(</span><span class="s1">String accountHolderName</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">accountHolderName </span><span class="s2">= </span><span class="s1">accountHolderName</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public double </span><span class="s1">getBalance</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">balance</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setBalance</span><span class="s2">(</span><span class="s0">double </span><span class="s1">balance</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">balance </span><span class="s2">= </span><span class="s1">balance</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">deposit</span><span class="s2">(</span><span class="s0">double </span><span class="s1">amount</span><span class="s2">){</span>
+        <span class="s1">balance </span><span class="s2">+= </span><span class="s1">amount</span><span class="s2">;</span>
+        <span class="s3">//System.out.println(&quot;Deposit Successful!&quot;);</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">withdraw</span><span class="s2">(</span><span class="s0">double </span><span class="s1">amount</span><span class="s2">){</span>
+        <span class="s0">if</span><span class="s2">(</span><span class="s1">amount </span><span class="s2">&gt; </span><span class="s4">0 </span><span class="s2">&amp;&amp; </span><span class="s1">balance </span><span class="s2">&gt;= </span><span class="s1">amount</span><span class="s2">) {</span>
+            <span class="s1">balance </span><span class="s2">-= </span><span class="s1">amount</span><span class="s2">;</span>
+            <span class="s3">//System.out.println(&quot;Withdraw Successful!&quot;);</span>
+        <span class="s2">}</span>
+        <span class="s0">else </span><span class="s2">{</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s5">&quot;Insufficient Balance!&quot;</span><span class="s2">);</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">displayDetails</span><span class="s2">(){</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span>
+                <span class="s5">&quot;accountNumber=&quot; </span><span class="s2">+ </span><span class="s1">accountNumber </span><span class="s2">+</span>
+                <span class="s5">&quot;, accountHolderName='&quot; </span><span class="s2">+ </span><span class="s1">accountHolderName </span><span class="s2">+ </span><span class="s5">'</span><span class="s0">\'</span><span class="s5">' </span><span class="s2">+</span>
+                <span class="s5">&quot;, balance=&quot; </span><span class="s2">+ </span><span class="s1">balance</span>
+                <span class="s2">);</span>
+    <span class="s2">}</span>
+
+    <span class="s3">/* 
+    public void displayDetails(){ 
+        System.out.println(&quot;Account{&quot; + 
+                &quot;accountNumber=&quot; + accountNumber + 
+                &quot;, accountHolderName='&quot; + accountHolderName + '\'' + 
+                &quot;, balance=&quot; + balance + 
+                '}'); 
+    }*/</span>
+
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
